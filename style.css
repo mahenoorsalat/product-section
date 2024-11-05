@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #b4dbf3;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 23px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot1,
+.dot2,
+.dot3 {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.colour {
+    background: blue;
+}
+
+.information {
+    padding: 20px;
+    text-align: left;
+    background: #fff;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.information h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.information h6 {
+    font-size: 16px;
+    color: #dc3545;
+    margin: 5px 0;
+}
+
+.information p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.column {
+    margin-top: 20px;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.number {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.number li {
+    background: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.number li:hover {
+    background: #d1d1d1;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    img {
+        width: 20%;
+        margin-top: 45px;
+        max-width: 90%;
+    }
+
+    .dots {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15px;
+    }
+
+    .information h1 {
+        font-size: 20px;
+    }
+
+    .information h6 {
+        font-size: 14px;
+    }
+
+    .information p {
+        font-size: 12px;
+    }
+
+    .number {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        height: 100vh;
+    }
+
+    .information {
+        margin: 10px 0;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .number li {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
